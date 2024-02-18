@@ -1,0 +1,49 @@
+/* color: #e01227; ROSSO */
+/* color: #fc19fc; ROSA */
+/* color: #0917d9; BLU */
+body {
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    background-color: #fcfcfa;
+    color: #444;
+    padding: 0 10px;
+    font-family: monospace;
+    hyphens: auto;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    font-variant: small-caps;
+}
+a {
+    color: #0917d9;
+    text-decoration: none;
+}
+a:hover {
+    color: #e01227;
+}
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+nav {
+    display: inline-block;
+}
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a {
+    font-weight: 900;
+}
+nav a[href*='/']::before {
+    content: "[ ";
+}
+nav a[href*='/']::after {
+    content: "]";
+}
