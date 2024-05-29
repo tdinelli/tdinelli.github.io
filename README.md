@@ -8,4 +8,4 @@ Inspired by the geniuses behind:
  - [bettermotherfuckingwebsite.com](http://bettermotherfuckingwebsite.com/)
  - [no-js.club](https://no-js.club/)
 
-There are others, I am sorry I forgot to mention someone.
+I'm sure there are other sources I forgot to mention, my apologies!
