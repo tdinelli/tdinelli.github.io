@@ -1,95 +1,95 @@
-/* color: #e01227; ROSSO */
-/* color: #fc19fc; ROSA */
-/* color: #0917d9; BLU */
 body {
-    margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.5em;
-    font-size: 1.1em;
-    background-color: #fcfcfa;
-    color: #444;
-    padding: 0 10px;
-    font-family: monospace;
-    hyphens: auto;
+    margin: 20px auto; /* Sets the top and bottom margin to 20px and centers the body */
+    max-width: 800px; /* Limits the maximum width of the content to 800px */
+    line-height: 1.5em; /* Sets the line height to 1.5 times the font size */
+    font-size: 1.1em; /* Sets the base font size */
+    background-color: #fcfcfa; /* Sets the background color */
+    color: #444; /* Sets the text color */
+    padding: 0 10px; /* Adds padding to the left and right */
+    font-family: Helvetica, monospace; /* Sets the font family */
+    hyphens: auto; /* Enables automatic hyphenation */
 }
 header {
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
-    white-space: nowrap;
-    font-variant: small-caps;
-    padding: 10px;
+    display: flex; /* Uses flexbox layout */
+    align-items: top; /* Aligns items to the top */
+    justify-content: space-between; /* Distributes space between elements */
+    white-space: nowrap; /* Prevents text from wrapping */
+    font-variant: small-caps; /* Uses small capital letters */
+    padding: 10px; /* Adds padding */
 }
 .header-content {
-    flex-grow: 1; /* Permette al contenuto di espandersi */
-    margin-right: 20px; /* Margine tra il testo e l'immagine */
+    flex-grow: 1; /* Allows the content to expand */
+    margin-right: 20px; /* Adds margin between the text and the image */
 }
-
 .header-content h1 {
-    margin: 0;
+    margin: 0; /* Removes the default margin */
 }
 .header-content h2 {
-    font-size: 1.3em
+    font-size: 1.3em; /* Sets the font size */
     /* margin: 0; */
 }
-
 .header-image img {
-    max-width: 170px; /* Imposta la larghezza massima dell'immagine */
-    height: auto; /* Mantiene l'aspetto proporzionato */
+    max-width: 170px; /* Sets the maximum width of the image */
+    height: auto; /* Maintains the aspect ratio */
 }
-
 @media (max-width: 600px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns items to the start */
     }
 
     .header-content,
     .header-image {
-        margin-bottom: 10px; /* Aggiunge uno spazio tra il contenuto e l'immagine */
+        margin-bottom: 10px; /* Adds space between the content and the image */
     }
 }
 a {
-    color: #0917d9;
-    text-decoration: none;
+    color: #0917d9; /* Sets the link color */
+    text-decoration: none; /* Removes the underline */
 }
 a:hover {
-    color: #e01227;
+    color: #e01227; /* Changes the color on hover */
 }
 h1,
 h2,
 h3 {
-    line-height: 1.2;
+    line-height: 1.2; /* Sets the line height */
 }
 nav {
-    display: inline-block;
+    display: inline-block; /* Makes the navigation display inline */
 }
 nav li {
-    display: inline-block;
-    margin-right: 20px;
+    display: inline-block; /* Makes list items display inline */
+    margin-right: 20px; /* Adds right margin to list items */
 }
 nav a {
-    font-weight: 900;
+    font-weight: 900; /* Makes the font bold */
 }
 nav a[href*='/']::before {
-    content: "[ ";
+    content: "[ "; /* Adds a prefix before the link */
 }
 nav a[href*='/']::after {
-    content: "]";
+    content: "]"; /* Adds a suffix after the link */
 }
 ul {
     /* list-style-type: none; */
-    padding: none;
+    padding: none; /* Removes padding from the unordered list */
 }
-
 li {
-    text-align: justify;
-    margin-bottom: 5px;
+    text-align: justify; /* Justifies the text */
+    margin-bottom: 5px; /* Adds bottom margin to list items */
 }
 .contact-info div {
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 10px; /* Adds bottom margin to divs */
+    padding-left: 20px; /* Adds left padding to divs */
 }
 .justified {
-    text-align: justify;
+    text-align: justify; /* Justifies the text */
+}
+.long-pipe {
+    display: inline-block; /* Makes the element inline-block */
+    height: 20px; /* Desired height */
+    border-left: 2px solid black; /* Pipe width and color */
+    margin: 0 10px; /* Space around the pipe */
+    vertical-align: middle; /* Vertical alignment */
 }
