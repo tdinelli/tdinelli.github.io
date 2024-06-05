@@ -6,7 +6,7 @@ body {
     background-color: #fcfcfa; /* Sets the background color */
     color: #444; /* Sets the text color */
     padding: 0 10px; /* Adds padding to the left and right */
-    font-family: Helvetica, monospace; /* Sets the font family */
+    font-family: "Noto Sans", sans-serif;
     hyphens: auto; /* Enables automatic hyphenation */
 }
 
