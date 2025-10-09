@@ -1,26 +1,26 @@
 body {
-    margin: 20px auto; /* Sets the top and bottom margin to 20px and centers the body */
-    max-width: 800px; /* Limits the maximum width of the content to 800px */
-    line-height: 1.5em; /* Sets the line height to 1.5 times the font size */
-    font-size: 1.1em; /* Sets the base font size */
-    background-color: #fcfcfa; /* Sets the background color */
-    color: #444; /* Sets the text color */
-    padding: 0 10px; /* Adds padding to the left and right */
-    font-family: "Noto Sans", sans-serif;
-    hyphens: auto; /* Enables automatic hyphenation */
+    margin: 20px auto;                    /* Sets the top and bottom margin to 20px and centers the body */
+    max-width: 800px;                     /* Limits the maximum width of the content to 800px */
+    line-height: 1.5em;                   /* Sets the line height to 1.5 times the font size */
+    font-size: 1.1em;                     /* Sets the base font size */
+    background-color: #fcfcfa;            /* Sets the background color */
+    color: #444;                          /* Sets the text color */
+    padding: 0 10px;                      /* Adds padding to the left and right */
+    font-family: "Noto Sans", sans-serif; /* Font style */
+    hyphens: auto;                        /* Enables automatic hyphenation */
 }
 
 header {
-    display: flex; /* Uses flexbox layout */
-    align-items: flex-start; /* Aligns items to the start */
+    display: flex;                  /* Uses flexbox layout */
+    align-items: flex-start;        /* Aligns items to the start */
     justify-content: space-between; /* Distributes space between elements */
-    white-space: nowrap; /* Prevents text from wrapping */
-    font-variant: small-caps; /* Uses small capital letters */
-    padding: 10px; /* Adds padding */
+    white-space: nowrap;            /* Prevents text from wrapping */
+    font-variant: small-caps;       /* Uses small capital letters */
+    padding: 10px;                  /* Adds padding */
 }
 
 .header-content {
-    flex-grow: 1; /* Allows the content to expand */
+    flex-grow: 1;       /* Allows the content to expand */
     margin-right: 20px; /* Adds margin between the text and the image */
 }
 
@@ -35,12 +35,12 @@ header {
 
 .header-image img {
     max-width: 170px; /* Sets the maximum width of the image */
-    height: auto; /* Maintains the aspect ratio */
+    height: auto;     /* Maintains the aspect ratio */
 }
 
 @media (max-width: 600px) {
     header {
-        flex-direction: column; /* Stacks items vertically */
+        flex-direction: column;  /* Stacks items vertically */
         align-items: flex-start; /* Aligns items to the start */
     }
 
@@ -54,8 +54,8 @@ header {
     }
 
     nav li {
-        display: block; /* Stacks the navigation links vertically */
-        margin-right: 0; /* Removes the right margin */
+        display: block;      /* Stacks the navigation links vertically */
+        margin-right: 0;     /* Removes the right margin */
         margin-bottom: 10px; /* Adds a bottom margin to separate links */
     }
 
@@ -77,7 +77,7 @@ header {
 }
 
 a {
-    color: #0917d9; /* Sets the link color */
+    color: #0917d9;        /* Sets the link color */
     text-decoration: none; /* Removes the underline */
 }
 
@@ -97,7 +97,7 @@ nav {
 
 nav li {
     display: inline-block; /* Makes list items display inline */
-    margin-right: 20px; /* Adds right margin to list items */
+    margin-right: 20px;    /* Adds right margin to list items */
 }
 
 nav a {
@@ -119,12 +119,12 @@ ul {
 
 li {
     text-align: justify; /* Justifies the text */
-    margin-bottom: 5px; /* Adds bottom margin to list items */
+    margin-bottom: 5px;  /* Adds bottom margin to list items */
 }
 
 .contact-info div {
     margin-bottom: 10px; /* Adds bottom margin to divs */
-    padding-left: 20px; /* Adds left padding to divs */
+    padding-left: 20px;  /* Adds left padding to divs */
 }
 
 .justified {
@@ -132,9 +132,9 @@ li {
 }
 
 .long-pipe {
-    display: inline-block; /* Makes the element inline-block */
-    height: 20px; /* Desired height */
+    display: inline-block;        /* Makes the element inline-block */
+    height: 20px;                 /* Desired height */
     border-left: 2px solid black; /* Pipe width and color */
-    margin: 0 10px; /* Space around the pipe */
-    vertical-align: middle; /* Vertical alignment */
+    margin: 0 10px;               /* Space around the pipe */
+    vertical-align: middle;       /* Vertical alignment */
 }
