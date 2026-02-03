@@ -1,0 +1,507 @@
+html {
+    scroll-behavior: smooth;              /* Smooth scrolling for anchor links */
+}
+
+body {
+    margin: 20px auto;                    /* Sets the top and bottom margin to 20px and centers the body */
+    max-width: 800px;                     /* Limits the maximum width of the content to 800px */
+    line-height: 1.7;                     /* Improved line height for better readability */
+    font-size: 1.125rem;                  /* Slightly larger base font (18px) */
+    background-color: #fafafa;            /* Sets the background color - warmer white */
+    color: #2c3e50;                       /* Sets the text color - richer, more professional */
+    padding: 0 10px;                      /* Adds padding to the left and right */
+    font-family: "Noto Sans", sans-serif; /* Font style */
+    hyphens: auto;                        /* Enables automatic hyphenation */
+}
+
+header {
+    display: flex;                  /* Uses flexbox layout */
+    align-items: flex-start;        /* Aligns items to the start */
+    justify-content: space-between; /* Distributes space between elements */
+    white-space: nowrap;            /* Prevents text from wrapping */
+    font-variant: small-caps;       /* Uses small capital letters */
+    padding: 10px;                  /* Adds padding */
+}
+
+.header-content {
+    flex-grow: 1;       /* Allows the content to expand */
+    margin-right: 20px; /* Adds margin between the text and the image */
+}
+
+.header-content h1 {
+    margin: 0 0 0.2em 0; /* Minimal bottom margin */
+    font-size: 2.5em;    /* Consistent with main h1 */
+}
+
+.header-content h2 {
+    font-size: 1.2em;       /* Slightly refined size */
+    margin: 0.3em 0;        /* Better vertical spacing */
+    font-weight: 400;       /* Lighter weight for subtitle */
+    letter-spacing: 0.5px;  /* Improved readability */
+}
+
+.header-image img {
+    max-width: 170px;           /* Sets the maximum width of the image */
+    height: auto;               /* Maintains the aspect ratio */
+    border-radius: 12px;        /* Rounded corners for modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.header-image img:hover {
+    transform: scale(1.03);     /* Slight zoom on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.05rem;  /* Slightly smaller base font */
+        padding: 0 15px;     /* More padding on sides */
+    }
+
+    section.card {
+        padding: 1.2rem;     /* Reduced padding for cards */
+    }
+
+    h1 {
+        font-size: 2.2em;    /* Slightly smaller headings */
+    }
+
+    h2 {
+        font-size: 1.6em;    /* Proportionally smaller */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;     /* Base font for mobile */
+        margin: 10px auto;   /* Reduced top/bottom margin */
+        padding: 0 10px;     /* Standard mobile padding */
+    }
+
+    header {
+        flex-direction: column;  /* Stacks items vertically */
+        align-items: center;     /* Centers items on mobile */
+        text-align: center;      /* Centers text */
+    }
+
+    .header-content {
+        margin-right: 0;         /* Remove right margin */
+        margin-bottom: 1em;      /* Space below content */
+    }
+
+    .header-content h1 {
+        font-size: 2em;          /* Smaller name on mobile */
+    }
+
+    .header-content h2 {
+        font-size: 1em;          /* Smaller subtitle on mobile */
+    }
+
+    .header-image {
+        margin-bottom: 1em;      /* Space below image */
+    }
+
+    .header-image img {
+        max-width: 140px;        /* Smaller image on mobile */
+    }
+
+    nav {
+        text-align: center;      /* Centers the navigation links */
+        width: 100%;             /* Full width */
+    }
+
+    nav a {
+        padding: 0.5em 0.8em;    /* Touch-friendly padding */
+        font-size: 1em;          /* Standard size on mobile */
+    }
+
+    nav li {
+        display: block;          /* Stacks the navigation links vertically */
+        margin-right: 0;         /* Removes the right margin */
+        margin-bottom: 0.8em;    /* Space between nav items */
+    }
+
+    .long-pipe {
+        display: none;           /* Hides the pipes on mobile */
+    }
+
+    h1 {
+        font-size: 1.8em;        /* Smaller h1 on mobile */
+    }
+
+    h2 {
+        font-size: 1.5em;        /* Smaller h2 on mobile */
+        margin-top: 1em;         /* Reduced top margin */
+    }
+
+    section.card {
+        padding: 1rem;           /* Compact padding on mobile */
+        margin-bottom: 1.5em;    /* Less space between cards */
+    }
+
+    section.card ul li {
+        margin-bottom: 0.6em;    /* Tighter list spacing */
+    }
+
+    /* Mobile-friendly publication items */
+    section.card#publications ul li {
+        padding: 0.6em;          /* Less padding on mobile */
+    }
+
+    .publication-title {
+        font-size: 1.05em;       /* Slightly smaller titles */
+    }
+
+    .publication-venue {
+        font-size: 0.95em;       /* Smaller venue text */
+    }
+
+    /* Touch-friendly buttons */
+    .abstract-toggle,
+    section.card ul li a[href*="doi.org"],
+    section.card ul li a[href*="DOI"] {
+        padding: 0.4em 0.8em;    /* Larger touch targets */
+        font-size: 0.9em;        /* Slightly larger on mobile */
+    }
+
+    /* Abstract content on mobile */
+    .abstract-content {
+        font-size: 0.9em;        /* Smaller abstract text */
+        padding: 0.8em;          /* Reduced padding */
+    }
+
+    /* Footer on mobile */
+    footer {
+        margin-top: 2em;         /* Less space on mobile */
+        padding-top: 1.5em;      /* Reduced padding */
+    }
+
+    hr {
+        margin: 1.5em 0;         /* Tighter spacing on mobile */
+    }
+}
+
+a {
+    color: #2563eb;                      /* Sets the link color - professional blue */
+    text-decoration: none;               /* Removes the underline */
+    transition: color 0.2s ease;         /* Smooth color transition */
+}
+
+a:hover {
+    color: #dc2626;                      /* Changes the color on hover - deep red */
+}
+
+h1 {
+    font-size: 2.5em;      /* Larger, more prominent main heading */
+    line-height: 1.2;      /* Sets the line height */
+    margin-bottom: 0.3em;  /* Better spacing */
+    letter-spacing: 0.5px; /* Subtle letter spacing */
+}
+
+h2 {
+    font-size: 1.8em;       /* Clear hierarchy for section headings */
+    line-height: 1.3;       /* Sets the line height */
+    margin-top: 1.5em;      /* Space above sections */
+    margin-bottom: 0.7em;   /* Space below headings */
+    letter-spacing: 0.3px;  /* Subtle letter spacing */
+    color: #1e293b;         /* Slightly darker for emphasis */
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+h3 {
+    font-size: 1.3em;      /* Sub-section headings */
+    line-height: 1.4;      /* Sets the line height */
+    margin-bottom: 0.5em;  /* Better spacing */
+}
+
+nav {
+    display: inline-block; /* Makes the navigation display inline */
+    margin-bottom: 0.5em;  /* Space below navigation */
+}
+
+nav li {
+    display: inline-block; /* Makes list items display inline */
+    margin-right: 20px;    /* Adds right margin to list items */
+}
+
+nav a {
+    font-weight: 700;      /* Bold but not too heavy */
+    font-size: 1.05em;     /* Slightly larger for prominence */
+    transition: all 0.2s ease; /* Smooth transitions */
+    display: inline-block; /* Allows transform */
+}
+
+nav a:hover {
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+
+nav a[href*='/']::before {
+    content: "[ ";         /* Adds a prefix before the link */
+    transition: all 0.2s ease;
+}
+
+nav a[href*='/']::after {
+    content: "]";          /* Adds a suffix after the link */
+    transition: all 0.2s ease;
+}
+
+ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0;       /* Removes default padding */
+}
+
+li {
+    text-align: justify; /* Justifies the text */
+    margin-bottom: 0.8em;  /* Better spacing between list items */
+    line-height: 1.6;      /* Improved readability within list items */
+}
+
+/* More compressed spacing for all card lists */
+section.card ul li {
+    margin-bottom: 0.5em;  /* Tighter spacing for list items */
+}
+
+/* Specific styling for education list - simple, no hover effects */
+section.card#education ul li {
+    padding: 0;                   /* No padding for tighter spacing */
+    margin-bottom: 0.3em;         /* Very tight spacing between items */
+    border-left: none;            /* No border */
+    transition: none;             /* No transitions */
+    border-radius: 0;             /* No rounded corners */
+}
+
+section.card#education ul li:hover {
+    background-color: transparent; /* No background change */
+    border-left-color: transparent;
+    padding-left: 0;              /* No indent */
+}
+
+/* Enhanced publication list styling - only for publications */
+section.card#publications ul li {
+    padding: 0.8em;               /* Add padding around each publication */
+    border-left: 3px solid transparent; /* Invisible border for hover effect */
+    transition: all 0.2s ease;    /* Smooth transition */
+    border-radius: 4px;           /* Subtle rounded corners */
+}
+
+section.card#publications ul li:hover {
+    background-color: #f5f5f5;    /* Very subtle gray background on hover */
+    border-left-color: #2563eb;   /* Blue accent border on hover */
+    padding-left: 1em;            /* Slight indent on hover */
+}
+
+/* Enhanced publication formatting */
+.publication-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1e293b;
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.publication-authors {
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+.publication-venue {
+    font-style: italic;
+    color: #475569;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.publication-links {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Style DOI links and Abstract button as badges */
+section.card ul li a[href*="doi.org"],
+section.card ul li a[href*="DOI"],
+.abstract-toggle {
+    display: inline-block;
+    background-color: #2563eb;    /* Blue background */
+    color: white;                 /* White text */
+    padding: 0.2em 0.6em;         /* Padding for badge look */
+    border-radius: 4px;           /* Rounded corners */
+    font-size: 0.85em;            /* Slightly smaller */
+    font-weight: 600;             /* Bold text */
+    text-transform: uppercase;    /* Uppercase letters */
+    transition: background-color 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+section.card ul li a[href*="doi.org"]:hover,
+section.card ul li a[href*="DOI"]:hover,
+.abstract-toggle:hover {
+    background-color: #1e40af;    /* Darker blue on hover */
+    color: white;                 /* Keep white text on hover */
+}
+
+.abstract-toggle {
+    background-color: #64748b;    /* Gray background for abstract button */
+}
+
+.abstract-toggle:hover {
+    background-color: #475569;    /* Darker gray on hover */
+}
+
+/* Abstract content styling */
+.abstract-content {
+    display: none;                /* Hidden by default */
+    margin-top: 0.8em;
+    padding: 1em;
+    background-color: #f5f5f5;    /* Very subtle gray for abstracts */
+    border-left: 3px solid #64748b;
+    border-radius: 4px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.abstract-content.show {
+    display: block;               /* Show when toggled */
+}
+
+.contact-info {
+    display: grid;                          /* Grid layout */
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns on desktop */
+    gap: 0.4em;                             /* Small gap between items */
+    margin-top: 0.5em;
+}
+
+.contact-info div {
+    padding: 0.4em 0.6em;                   /* Compact padding */
+    line-height: 1.4;                       /* Tighter line height */
+    transition: all 0.2s ease;              /* Smooth transitions */
+    border-radius: 4px;                     /* Rounded corners */
+}
+
+.contact-info div:hover {
+    background-color: #f5f5f5;              /* Light background on hover */
+    transform: translateX(3px);             /* Slight shift on hover */
+}
+
+.contact-info div i {
+    color: #64748b;                         /* Gray color for icons */
+    margin-right: 0.5em;                    /* Space between icon and text */
+    transition: color 0.2s ease;            /* Smooth color transition */
+}
+
+.contact-info div:hover i {
+    color: #2563eb;                         /* Blue color on hover */
+}
+
+/* Mobile: single column */
+@media (max-width: 600px) {
+    .contact-info {
+        grid-template-columns: 1fr;         /* Single column on mobile */
+    }
+}
+
+p {
+    margin-bottom: 1em;  /* Better paragraph spacing */
+}
+
+/* Selection styling */
+::selection {
+    background-color: #bfdbfe;   /* Light blue selection background */
+    color: #1e293b;              /* Dark text for contrast */
+}
+
+::-moz-selection {
+    background-color: #bfdbfe;   /* Light blue selection background for Firefox */
+    color: #1e293b;              /* Dark text for contrast */
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid #2563eb;  /* Blue outline for keyboard navigation */
+    outline-offset: 2px;         /* Space around the outline */
+}
+
+/* Improved code/pre styling if present */
+code {
+    background-color: #f1f5f9;   /* Light gray background */
+    padding: 0.2em 0.4em;        /* Padding around inline code */
+    border-radius: 3px;          /* Rounded corners */
+    font-size: 0.9em;            /* Slightly smaller */
+    color: #dc2626;              /* Red color for code */
+}
+
+section {
+    margin-bottom: 2em;  /* Space between sections */
+}
+
+section.card {
+    background-color: #fcfcfc;     /* Very subtle background, almost same as page */
+    border-radius: 8px;            /* Rounded corners */
+    padding: 1.5rem;               /* Internal spacing */
+    margin-bottom: 2em;            /* Space between cards */
+    border: 1px solid #e8e8e8;     /* Very subtle border */
+    transition: all 0.3s ease;     /* Smooth transitions for all properties */
+}
+
+section.card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow on hover */
+    transform: translateY(-2px);   /* Slight lift on hover */
+}
+
+section.card h2 {
+    margin-top: 0;  /* Remove top margin for card headings */
+}
+
+.justified {
+    text-align: justify; /* Justifies the text */
+}
+
+/* Horizontal rule styling */
+hr {
+    border: none;                 /* Remove default border */
+    height: 1px;                  /* Thin line */
+    background-color: #cbd5e1;    /* Solid continuous line */
+    margin: 2em 0;                /* Vertical spacing */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 3em;              /* More space above footer */
+    padding-top: 2em;             /* Padding above footer content */
+    border-top: 1px solid #e8e8e8; /* Subtle top border */
+}
+
+footer h2 {
+    font-size: 1.3em;             /* Smaller footer heading */
+    margin-top: 0;                /* Remove top margin */
+}
+
+footer p {
+    color: #64748b;               /* Lighter text color for footer */
+    font-size: 0.95em;            /* Slightly smaller text */
+    line-height: 1.6;             /* Better readability */
+}
+
+.copyright {
+    text-align: center;           /* Center copyright text */
+    color: #94a3b8;               /* Even lighter gray */
+    font-size: 0.9em;             /* Smaller copyright text */
+    margin-top: 2em;              /* Space above copyright */
+    padding-top: 1em;             /* Padding above */
+    border-top: 1px solid #f1f5f9; /* Very subtle separator */
+}
+
+.long-pipe {
+    display: inline-block;        /* Makes the element inline-block */
+    height: 22px;                 /* Taller height */
+    border-left: 2px solid #475569; /* Darker gray pipe */
+    margin: 0 12px;               /* Space around the pipe */
+    vertical-align: middle;       /* Vertical alignment */
+}

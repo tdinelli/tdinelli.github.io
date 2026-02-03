@@ -10,14 +10,13 @@
     <meta property="og:description" content="Timoteo Dinelli's personal website">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <meta name="google-site-verification" content="z1FQ-u-51z8ABzjZ191cyHjhd6oYcSUz4xWdB1YWkIo" />
 </head>
 <body>
     <nav>
         <a href="/">Home</a><span class="long-pipe"></span>
-        <a href="./static/cv.pdf">CV</a><span class="long-pipe"></span>
-        <a href="./aboutMe/index.html">About Me</a>
+        <a href="assets/documents/cv.pdf">CV</a>
     </nav>
     <hr>
     <header>
@@ -32,29 +31,32 @@
             </h2>
         </div>
         <div class="header-image">
-            <img src="./static/picture.jpg" alt="Profile Picture" width="180">
+            <img src="assets/images/picture.jpg" alt="Profile Picture" width="180">
         </div>
     </header>
     <main>
         <section>
             <p class="justified">
-            I am a fifth-year Ph.D. student at Politecnico di Milano, in the Department of
-            Chemistry, Materials, and Chemical Engineering Giulio Natta, within the <a
-            href="http://creckmodeling.polimi.it/">CRECK</a> modeling laboratory, advised by
-            Alessandro Stagni.
-            My research focuses on the application of data-driven methods to develop chemical
-            kinetic models for predicting the combustion and pyrolysis of complex fuels. In
-            addition, my work includes the development of optimization routines and reduction
-            strategies for the computational cost associated with chemical kinetic models.
-            I enjoy writing code, mostly in C/C++, more recently in Julia and Fortran. As you can
-            see, my interests are terribly broad, I admit my exuberance, and I do nothing to limit it. I
-            am fortunate to be able to explore diverse and interesting questions while holding down a
-            paying job.
+            I am a fifth-year Ph.D. student at Politecnico di Milano, in the
+            Department of Chemistry, Materials, and Chemical Engineering Giulio
+            Natta, within the <a href="http://creckmodeling.polimi.it/">CRECK</a>
+            modeling laboratory, advised by Alessandro Stagni. My research
+            focuses on the application of data-driven methods to develop
+            chemical kinetic models for predicting the combustion and pyrolysis
+            of complex fuels. In addition, my work includes the development of
+            optimization routines and reduction strategies for the
+            computational cost associated with chemical kinetic models. I enjoy
+            writing code, mostly in C/C++, more recently in Julia and Fortran.
+            As you can see, my interests are terribly broad, I admit my
+            exuberance, and I do nothing to limit it. I am fortunate to be able
+            to explore diverse and interesting questions while holding down a
+            paying job (see my <a href="assets/documents/cv.pdf">[ CV]</a> for
+            more details).
             </p>
             <p>If you are interested in my work, contact me!
             <a href="mailto:timoteo.dinelli@polimi.it">[ Email me]</a></p>
         </section>
-        <section>
+        <section class="card" id="education">
             <h2>Education</h2>
             <ul>
                 <li>
@@ -77,78 +79,133 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="card" id="publications">
             <h2>List of Publications</h2>
+            <p style="margin-bottom: 1em; font-style: italic; color: #64748b;">For an always up-to-date list of publications, visit my <a href="https://scholar.google.com/citations?user=H117wUwAAAAJ&hl=it&oi=ao">Google Scholar profile</a>.</p>
             <ul>
                 <li>
-                    Patrizia Crepaldi, Andrea Nobili, <b><u>Timoteo Dinelli</u></b>,
-                    Luna Pratali Maffei, Alberto Cuoci and Tiziano Faravelli.
-                    ‘Effect of ammonia on soot volume fraction and morphology
-                    in laminar flames: modeling the impact of NH2
-                    radicals’. Fuel 409 (2026), p. 137695. <a
-                    href="https://doi.org/10.1016/j.fuel.2025.137695">DOI</a>.
+                    <span class="publication-title">An integrated data-driven workflow for kinetic model development and optimisation: theory and application to OMEs combustion</span>
+                    <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Alessandro Stagni, Tiziano Faravelli</span>
+                    <span class="publication-venue">Combustion Theory and Modelling (2026), pp. 1-13</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1080/13647830.2025.2609550">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-0')">Abstract</button>
+                    </div>
+                    <div id="abstract-0" class="abstract-content">
+                        The development of computationally efficient kinetic mechanisms for alternative fuels remains a critical bottleneck for large-scale CFD simulations in engine design. This work presents a novel integrated data-driven workflow that automates kinetic mechanism development by coupling chemical lumping, skeletal reduction, and parameter optimisation within a unified framework, demonstrated through a compact OME2 combustion mechanism. Using the SciExpeM data ecosystem, the workflow automatically manages mechanism construction, reduction, and optimisation with minimal manual intervention. The approach treats aggressive skeletal reduction as the foundation for two-stage optimisation, where temporary accuracy loss is systematically recovered through targeted parameter adjustment within physically consistent uncertainty bounds. The integrated workflow achieved a decrease in the number of species from 150 to 55 using DRGEP-based reduction, followed by evolutionary parameter optimisation through OptiSMOKE++. Comprehensive validation against experimental data spanning ignition delay times, jet-stirred reactor speciation, and laminar flame speeds demonstrated reliability across operating conditions relevant to compression ignition engines (650–1700 K, 1–50 atm, ϕ = 0.3–2.0). The optimised mechanism successfully recovered the accuracy lost during reduction, particularly in the critical intermediate temperature regime (770–910 K). The integrated workflow further improved the traditional size-accuracy trade-off through systematic parameter recalibration, achieving computational efficiency for CFD applications while maintaining chemical fidelity comparable to detailed mechanisms. This methodology establishes a foundation for rapid development of compact kinetic mechanisms for alternative fuels with automated workflows ensuring physical consistency.
+                    </div>
                 </li>
                 <li>
-                    Alessandro Stagni and <b><u>Timoteo Dinelli</u></b>.
-                    ‘Impact of third-body colliders on ammonia pyrolysis and
-                    oxidation: Detailed kinetic modeling and mechanistic
-                    insights’. Chemical Engineering Journal (2025), p. 170737.
-                    <a
-                    href="https://doi.org/10.1016/j.cej.2025.170737">DOI</a>.
+                    <span class="publication-title">Effect of ammonia on soot volume fraction and morphology in laminar flames: modeling the impact of NH2 radicals</span>
+                    <span class="publication-authors">Patrizia Crepaldi, Andrea Nobili, <b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Alberto Cuoci, Tiziano Faravelli</span>
+                    <span class="publication-venue">Fuel 409 (2026), p. 137695</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.fuel.2025.137695">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-1')">Abstract</button>
+                    </div>
+                    <div id="abstract-1" class="abstract-content">
+                        There is a growing scientific and industrial interest in ammonia as a zero-carbon fuel. This study examines the impact of ammonia on the reduction of soot formation in ethylene laminar flames using a comprehensive kinetic model. The study examines the influence of the NH2 radical by incorporating its interaction with gas-phase aromatic species and soot particles into the adopted model. In this context, reference reaction rates are proposed and discussed. The model is compared to a set of experimental measurements of different target quantities, including soot volume fraction, fv, in two distinct sets of counterflow flames. The model has been demonstrated to effectively predict pivotal morphological soot characteristics, including the progression of the average particle size (D63) in counterflow flames and the particle size distribution (PSD) in premixed burner-stabilized stagnation flames at a height above the burner, Hp, equals to 5 mm for diverse NH3 concentrations. Nevertheless, it has been demonstrated that the model poorly predicts the bimodal distribution of the PSD when ammonia is introduced together with ethylene at Hp = 10 mm. Kinetic analyses are conducted to identify the primary competing reactions between N-containing species and hydrocarbons, which influence the observed and simulated reduction in 4-ring PAH in the presence of NH3 relatively to pure ethylene flames. It is essential that future experimental studies be conducted to quantify N-containing hydrocarbons in laminar flames. This will serve to validate the findings of the kinetic modeling study and refine the understanding of pathways controlling soot chemistry in ammonia-doped flames.
+                    </div>
                 </li>
                 <li>
-                    <b><u>Timoteo Dinelli</u></b>, Alessandro Stagni, and
-                    Matthias Ihme. ‘Learning chemical kinetics through data
-                    assimilation: Theory and application to ammonia oxidation’.
-                    Chemical Engineering Journal (2025), p. 168863. <a
-                    href="https://doi.org/10.1016/j.cej.2025.168863">DOI</a>.
+                    <span class="publication-title">Impact of third-body colliders on ammonia pyrolysis and oxidation: Detailed kinetic modeling and mechanistic insights</span>
+                    <span class="publication-authors">Alessandro Stagni, <b><u>Timoteo Dinelli</u></b></span>
+                    <span class="publication-venue">Chemical Engineering Journal 526 (2025), p. 170737</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.cej.2025.170737">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-2')">Abstract</button>
+                    </div>
+                    <div id="abstract-2" class="abstract-content">
+                        A major challenge in the chemical kinetics of ammonia is the quantification of the role of the bath gas in pressure-dependent reactions, in the full operating space. To this purpose, this work systematically investigates the impact of third-body colliders on ammonia and ammonia/hydrogen pyrolysis and oxidation chemistry, through an integrated workflow: after incorporating recent high-level theoretical calculations into a comprehensive detailed kinetic model, the key pressure-dependent reaction rates were parametrized through a fitting procedure, obtaining average errors below 3% compared to the starting theoretical values, while explicitly accounting for collider-specific behavior. Validation against experimental data highlighted the impact of major colliders on ignition delay times, species profiles, and laminar flame propagation. It was found that recombination reactions involving NH3, HNO, and HO2 are significantly affected by the bath gas composition, including ammonia itself as a collider, which is often ignored in most kinetic models. Species profiles in both pyrolysis and oxidation conditions showed significant sensitivity to the collider-specific effects: specifically, ammonia third-body effect in the recombination reaction H+O2(+M)→HO2(+M) was found to play a major role in the inhibition of H2 oxidation, confirming the previous hypotheses. On the other hand, laminar flame speeds exhibited a lower sensitivity, with deviations typically within experimental uncertainties. Finally, the impact of mixture rules in the kinetic predictions was assessed by considering the four pressure-dependent reactions for which theoretical data on ammonia-related collision efficiencies are currently available. It was found that adopting a more accurate reduced-pressure mixture rule instead of a linear mixing, important deviations in the pressure-dependent rate constants at higher pressures were observed, yet with a moderate effect on macroscopic observables like ignition delay time and laminar flame speeds.
+                    </div>
                 </li>
                 <li>
-                    Guillaume Vignat, Yichi Ma, Jen Zen Ho, Younghwa Cho,
-                    Nozomu Hashimoto, <b><u>Timoteo Dinelli</u></b>, Taekeun
-                    Yoon, Colette Fisher, and Matthias Ihme. 'Effect of
-                    Synthetic Aviation Fuels on the Stochastic Ignition of Fuel
-                    Droplets on Hot Surfaces'. AIAA SCITECH 2025 Forum. <a
-                    href="https://doi.org/10.2514/6.2025-0741">DOI</a>.
+                    <span class="publication-title">Learning chemical kinetics through data assimilation: Theory and application to ammonia oxidation</span>
+                    <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Alessandro Stagni, Matthias Ihme</span>
+                    <span class="publication-venue">Chemical Engineering Journal 524 (2025), p. 168863</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.cej.2025.168863">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-3')">Abstract</button>
+                    </div>
+                    <div id="abstract-3" class="abstract-content">
+                        Chemical kinetics plays a crucial role in understanding and predicting combustion processes, yet accurately estimating rate parameters remains challenging due to complex reaction dynamics and intrinsic uncertainties. This study examines the potential of the Augmented Ensemble Kalman Filter (AEnKF) for assimilating experimental data into chemical kinetic models. By employing an ensemble of stochastic simulations, AEnKF facilitates robust estimation of a consolidated state that consists of state variables and model parameters while incorporating observational data to enhance predictions. The developed framework simultaneously estimates key kinetic parameters governing reaction dynamics, simultaneously improving state predictions and parameter representation. As a representative case study, the model is applied to ammonia oxidation kinetics using species time-histories from shock tube experiments. By selecting a subset of key reaction rates, we demonstrate that the methodology handles the inherent nonlinearities of chemical kinetics while retaining physical consistency throughout the parameter estimation process. By performing systematic parameter studies to assess the effects of sample size and assimilation frequency, we show that the algorithm operates efficiently across a broad range of conditions and learns different kinetic parameters effectively. Results illustrate the potential of AEnKF as a reliable tool for state- and parameter estimation in the development of advanced combustion kinetic models.
+                    </div>
                 </li>
                 <li>
-                    Andrea Nobili, Niccolo Fanari, <b><u>Timoteo Dinelli</u></b>, Edoardo Cipriano,
-                    Alberto Cuoci, Matteo Pelucchi, Alessio Frassoldati and Tiziano Faravelli. ‘Kinetic
-                    modeling of carbonaceous particle morphology, polydispersity and nanostructure
-                    through the discrete sectional approach’. Combustion and Flame 269 (2024), p.
-                    113697. <a href="https://doi.org/10.1016/j.combustflame.2024.113697">DOI</a>.
+                    <span class="publication-title">Effect of Synthetic Aviation Fuels on the Stochastic Ignition of Fuel Droplets on Hot Surfaces</span>
+                    <span class="publication-authors">Guillaume Vignat, Yichi Ma, Jen Zen Ho, Younghwa Cho, Nozomu Hashimoto, <b><u>Timoteo Dinelli</u></b>, Taekeun Yoon, Colette Fisher, Matthias Ihme</span>
+                    <span class="publication-venue">AIAA SCITECH 2025 Forum (2025)</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.2514/6.2025-0741">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-4')">Abstract</button>
+                    </div>
+                    <div id="abstract-4" class="abstract-content">
+                        When a flammable liquid is put in contact with a very hot surface, thermal ignition of fuel vapors can occur. In the event of a leak, this process, called hot surface ignition, can lead to fires in aircrafts, spacecrafts, vehicles, and machinery. In the aerospace industry, design practices and certification processes must ensure that this fire hazard is mitigated. In the present work, we performed experiments to assess whether sustainable aviation fuels have a different hot surface ignition behavior compared to petroleum-derived jet fuel. In a canonical configuration, 2.5mm fuel droplets were released onto a high temperature optically accessible surface. After a 150mm fall representative of a typical aircraft engine compartment, the droplets broke up upon impact and ignition occured if the surface temperature was sufficiently high. The temperature of ignition was quantified and we found that all investigated fuels had a similar or higher hot surface ignition temperature to jet-A in this configuration. The temperature of ignition spanned a 70K range for the 4 fuels investigated. High speed shadowgraphy revealed the effect of fuel surface tension on the droplet break-up process, and high speed chemiluminescence imaging revealed the multi-step ignition process that the droplet underwent.
+                    </div>
                 </li>
                 <li>
-                    <b><u>Timoteo Dinelli</u></b>, Alessandro Pegurri, Andrea Bertolino, Alessandro
-                    Parente, Tiziano Faravelli, Marco Mehl, and Alessandro Stagni. ‘A data-driven,
-                    lumped kinetic modeling of OME2-5 pyrolysis and oxidation’. Proceedings of the
-                    Combustion Institute 40.1 (2024), p. 105547. <a
-                    href="https://doi.org/10.1016/j.proci.2024.105547">DOI</a>.
+                    <span class="publication-title">Kinetic modeling of carbonaceous particle morphology, polydispersity and nanostructure through the discrete sectional approach</span>
+                    <span class="publication-authors">Andrea Nobili, Niccolò Fanari, <b><u>Timoteo Dinelli</u></b>, Edoardo Cipriano, Alberto Cuoci, Matteo Pelucchi, Alessio Frassoldati, Tiziano Faravelli</span>
+                    <span class="publication-venue">Combustion and Flame 269 (2024), p. 113697</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.combustflame.2024.113697">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-5')">Abstract</button>
+                    </div>
+                    <div id="abstract-5" class="abstract-content">
+                        Carbon nanoparticle (CNP) formation from hydrocarbons combustion is of high interest not only for the study of pollutant (soot) emissions, but, above all, in the area of advanced materials. CNP optical and electronical properties, relevant for practical applications, significantly change with their size, morphology, and nanostructure. This work extends a detailed soot kinetic model, based on the discrete sectional approach, to explicitly incorporate the description of CNP polydispersity, maintaining the CHEMKIN-like format. The model considers various nanosized primary particles, generated from liquid-like counterparts through the carbonization process, which successively grow or aggregate forming fractal structures. The model is validated against experimental measurements from the literature including CNP volume fraction, several morphological characteristics, number density and particle H/C ratio. Data are taken from 19 laminar flames, in different configurations (counterflow diffusion flames, premixed flat flames established on the McKenna-type burner and burner-stabilized stagnation flames) and over a wide range of operating conditions (P=1–10 atm, Tmax=1556-2264 K). The model captures the measured trends of all the analyzed CNP properties as a function of equivalence ratio, residence time and fuel type in premixed flames, and pressure and strain rate in counterflow flames. Model deviations from the experiments are discussed, also in comparison with other state-of-the-art soot models based on different approaches. Sensitivity analyses are performed on carbonization, coalescence, and aggregation rates, which have the largest impact on CNP morphology and are characterized by larger uncertainty compared to elementary chemical pathways.
+                    </div>
                 </li>
                 <li>
-                    Alessandro Pegurri, <b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Tiziano
-                    Faravelli, and Alessandro Stagni. ‘Coupling Chemical Lumping to Data-Driven
-                    Optimization for the Kinetic Modeling of Dimethoxymethane (DMM) Combustion’.
-                    Combustion and Flame 260 (2024), p. 113202. <a
-                    href="https://doi.org/10.1016/j.combustflame.2023.113202">DOI</a>.
+                    <span class="publication-title">A data-driven, lumped kinetic modeling of OME2-5 pyrolysis and oxidation</span>
+                    <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Alessandro Pegurri, Andrea Bertolino, Alessandro Parente, Tiziano Faravelli, Marco Mehl, Alessandro Stagni</span>
+                    <span class="publication-venue">Proceedings of the Combustion Institute 40(1) (2024), p. 105547</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.proci.2024.105547">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-6')">Abstract</button>
+                    </div>
+                    <div id="abstract-6" class="abstract-content">
+                        The kinetic mechanisms describing the combustion of longer-chain fuels often have limited applicability due to the high number of species involved in their pyrolysis and oxidation paths. In this work, this is addressed for what concerns oxymethylene ethers (OMEn), which recently emerged as synthetic fuel candidates for diesel applications. Starting from an established mechanism representing the pyrolysis and oxidation of dimethoxymethane DMM or OME1, the combustion chemistry of heavier OMEs up to OME5 was developed by relying on reaction classes, where structural isomers were lumped into pseudospecies, and the related rates assigned according to analogy and rate rules, considering OME1 and its lumped chemistry as reference. The obtained lumped model was then coupled to a data-driven optimization methodology, still based on reaction classes, where the consistency among the OME2-5 submodules was preserved through scaling factors previously defined. Such a combined approach proved particularly effective in delivering a compact kinetic mechanism, requiring only 48 species on top of the OME1 model for its extension up to OME5. The extensive validation and analysis of model predictions show the successful capability of the lumped formulation in representing the chemical behavior of the whole OME family, and the effectiveness of the optimization procedure in further improving model predictions throughout most of the operating space and target properties (ignition delay times in shock tubes, laminar flame speeds, speciations in stirred and flow reactors). The successful implementation of this workflow paves the way for its extensive use for the kinetic modeling of even heavier fuels and its coupling with skeletal reduction techniques to further reduce their size to affordable levels for CFD applications.
+                    </div>
                 </li>
                 <li>
-                    <b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Alessandro Pegurri, Amedeo
-                    Puri, Alessandro Stagni, and Tiziano Faravelli. ‘Automated Kinetic Mechanism
-                    Evaluation for E-Fuels Using SciExpeM: The Case of Oxymethylene Ethers’,
-                    2023-24–0092. Capri, Italy, 2023. <a
-                    href="https://doi.org/10.4271/2023-24-0092">DOI</a>.
+                    <span class="publication-title">Coupling chemical lumping to data-driven optimization for the kinetic modeling of dimethoxymethane (DMM) combustion</span>
+                    <span class="publication-authors">Alessandro Pegurri, <b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Tiziano Faravelli, Alessandro Stagni</span>
+                    <span class="publication-venue">Combustion and Flame 260 (2024), p. 113202</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.combustflame.2023.113202">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-7')">Abstract</button>
+                    </div>
+                    <div id="abstract-7" class="abstract-content">
+                        The kinetic mechanisms describing the combustion of longer-chain fuels often have limited applicability due to the high number of species involved in their oxidation and decomposition paths. This work proposes a combined methodology for developing compact but accurate kinetic mechanisms of these fuels and applies it to dimethoxymethane (DMM), or oxymethylene ether 1 (OME1). An automatic chemical lumping procedure, performed by grouping structural isomers into pseudospecies, was proposed and applied to a detailed kinetic model of DMM pyrolysis and oxidation, built from state-of-the-art kinetic sub-models. Such a methodology proved particularly efficient in delivering a compact kinetic mechanism, requiring only 11 species instead of 35 to describe DMM sub-chemistry. The obtained lumped kinetic model was then improved through a data-driven optimization procedure, targeting data artificially generated by the reference detailed mechanism. The optimization was performed on the physically-constrained parameters of the modified-Arrhenius rate constants of the controlling reaction steps, identified via local sensitivity analyses. The dissimilarities between the predictions of the detailed and lumped models were minimized using a Curve Matching objective function for a comprehensive and quantitative characterization. Above all, the optimized mechanism was found to behave comparably to the starting detailed one, throughout most of the operating space and target properties (ignition delay times in shock tubes, laminar flame speeds, and speciations in stirred and flow reactors). The successful application of the proposed methodology to the DMM chemistry paves the way for its extensive use in the kinetic modeling of longer OMEs as well as heavier fuels, for which the computational advantages are expected to be even higher.
+                    </div>
                 </li>
                 <li>
-                    Edoardo Ramalli, <b><u>Timoteo Dinelli</u></b>, Andrea Nobili, Alessandro
-                    Stagni, Barbara Pernici, and Tiziano Faravelli. ‘Automatic Validation and
-                    Analysis of Predictive Models by Means of Big Data and Data Science’. Chemical
-                    Engineering Journal 454 (2023), p. 140149. <a
-                    href="https://doi.org/10.1016/j.cej.2022.140149">DOI</a>.
+                    <span class="publication-title">Automated Kinetic Mechanism Evaluation for e-Fuels Using SciExpeM: The Case of Oxymethylene Ethers</span>
+                    <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Alessandro Pegurri, Amedeo Puri, Alessandro Stagni, Tiziano Faravelli</span>
+                    <span class="publication-venue">SAE Technical Paper 2023-24-0092, Capri, Italy (2023)</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.4271/2023-24-0092">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-8')">Abstract</button>
+                    </div>
+                    <div id="abstract-8" class="abstract-content">
+                        In the rapidly changing scenario of the energy transition, data-driven tools for kinetic mechanism development and testing can greatly support the evaluation of the combustion properties of new potential e-fuels. Despite the effectiveness of kinetic mechanism generation and optimization procedures and the increased availability of experimental data, integrated methodologies combining data analysis, kinetic simulations, chemical lumping, and kinetic mechanism optimization are still lacking. This paper presents an integrated workflow that combines recently developed automated tools for kinetic mechanism development and testing, from data collection to kinetic model reduction and optimization. The proposed methodology is applied to build a consistent, efficient, and well-performing kinetic mechanism for the combustion of oxymethylene ethers (OMEs), which are promising synthetic e-fuels for transportation. In fact, OMEs are easily mixed with conventional fuels and share similar ignition propensity, and are therefore potential drop-in fuels. Additionally, their oxygenated nature significantly reduces soot emissions. The proposed workflow extends our recently developed kinetic mechanism for OME1 (dimethoxymethane – DMM) to OME2-4: the model is derived from state-of-the-art detailed literature mechanisms, updated according to a reaction class-based approach, and simplified according to chemical lumping. Then, the model is reduced to two different skeletal versions using DRGEP method. An extensive database of ~80 datasets for kinetic mechanism testing is collected, covering different reactor types and experimental conditions. The selected datasets are uploaded to SciExpeM, a recently developed data ecosystem that allows automated kinetic mechanism performance evaluation through a multi-index approach. The performance obtained from SciExpeM shows that the lumped mechanism reproduces well the selected experimental data, and both skeletal mechanisms, well-suited to CFD and engine simulations, show equally good performance. Some minor model deficiencies identified for OME2 and OME3 are finally recovered via data-driven kinetic modeling optimization, which relies on the same multi-index approach adopted in SciExpeM for the kinetic model evaluation.
+                    </div>
+                </li>
+                <li>
+                    <span class="publication-title">Automatic validation and analysis of predictive models by means of big data and data science</span>
+                    <span class="publication-authors">Edoardo Ramalli, <b><u>Timoteo Dinelli</u></b>, Andrea Nobili, Alessandro Stagni, Barbara Pernici, Tiziano Faravelli</span>
+                    <span class="publication-venue">Chemical Engineering Journal 454 (2023), p. 140149</span>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.cej.2022.140149">DOI</a>
+                        <button class="abstract-toggle" onclick="toggleAbstract('abstract-9')">Abstract</button>
+                    </div>
+                    <div id="abstract-9" class="abstract-content">
+                        Validation is an essential procedure in the development of a predictive model in several engineering fields. In addition, recent data analysis techniques and the increasing availability of data have the potential to provide a deeper understanding of experimental data and simulation models. This work proposes a systematic, objective, and automatic methodology to validate and analyze experiments and models from a high-level perspective. The proposed methodology exploits the opportunities offered by the 'data ecosystem' concept, combining data and model evaluation and providing an integrated set of techniques to produce synthetic but comprehensive insights about the experiment and the predictive model. The methodology focuses on data assessment of the experiments used in the process, the use of a trend similarity comparison index to measure the model performance, and data science techniques to systematically extract models' behavior insight by analyzing a large number of validation results and linking them to the experiment characteristics.
+                    </div>
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="card">
             <h2>Contact Information</h2>
             <div class="contact-info">
                 <div><i class="fa-solid fa-envelope"></i>
@@ -165,14 +222,20 @@
             </div>
         </section>
     </main>
-    <hr>
     <footer>
         <section>
             <h2>Epilogue</h2>
             <p>This page was created by mixing different sources. Feel free to use it! The source
             code can be found on my <a href="https://github.com/tdinelli/tdinelli.github.io">GitHub</a>.</p>
         </section>
-        <p class="copyright">Copyright © 2025, Timoteo Dinelli.</p>
+        <p class="copyright">Copyright © 2026, Timoteo Dinelli.</p>
     </footer>
+    <script>
+        // Toggle abstract visibility
+        function toggleAbstract(id) {
+            const abstract = document.getElementById(id);
+            abstract.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
