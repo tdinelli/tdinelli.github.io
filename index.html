@@ -82,7 +82,9 @@
         <section class="card" id="publications">
             <h2>List of Publications</h2>
             <p style="margin-bottom: 1em; font-style: italic; color: #64748b;">For an always up-to-date list of publications, visit my <a href="https://scholar.google.com/citations?user=H117wUwAAAAJ&hl=it&oi=ao">Google Scholar profile</a>.</p>
-            <ul>
+
+            <h3 class="year-separator collapsible" onclick="toggleYear('year-2026')">2026</h3>
+            <ul class="year-publications" id="year-2026">
                 <li>
                     <span class="publication-title">An integrated data-driven workflow for kinetic model development and optimisation: theory and application to OMEs combustion</span>
                     <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Alessandro Stagni, Tiziano Faravelli</span>
@@ -107,6 +109,10 @@
                         There is a growing scientific and industrial interest in ammonia as a zero-carbon fuel. This study examines the impact of ammonia on the reduction of soot formation in ethylene laminar flames using a comprehensive kinetic model. The study examines the influence of the NH2 radical by incorporating its interaction with gas-phase aromatic species and soot particles into the adopted model. In this context, reference reaction rates are proposed and discussed. The model is compared to a set of experimental measurements of different target quantities, including soot volume fraction, fv, in two distinct sets of counterflow flames. The model has been demonstrated to effectively predict pivotal morphological soot characteristics, including the progression of the average particle size (D63) in counterflow flames and the particle size distribution (PSD) in premixed burner-stabilized stagnation flames at a height above the burner, Hp, equals to 5 mm for diverse NH3 concentrations. Nevertheless, it has been demonstrated that the model poorly predicts the bimodal distribution of the PSD when ammonia is introduced together with ethylene at Hp = 10 mm. Kinetic analyses are conducted to identify the primary competing reactions between N-containing species and hydrocarbons, which influence the observed and simulated reduction in 4-ring PAH in the presence of NH3 relatively to pure ethylene flames. It is essential that future experimental studies be conducted to quantify N-containing hydrocarbons in laminar flames. This will serve to validate the findings of the kinetic modeling study and refine the understanding of pathways controlling soot chemistry in ammonia-doped flames.
                     </div>
                 </li>
+            </ul>
+
+            <h3 class="year-separator collapsible" onclick="toggleYear('year-2025')">2025</h3>
+            <ul class="year-publications" id="year-2025">
                 <li>
                     <span class="publication-title">Impact of third-body colliders on ammonia pyrolysis and oxidation: Detailed kinetic modeling and mechanistic insights</span>
                     <span class="publication-authors">Alessandro Stagni, <b><u>Timoteo Dinelli</u></b></span>
@@ -143,6 +149,10 @@
                         When a flammable liquid is put in contact with a very hot surface, thermal ignition of fuel vapors can occur. In the event of a leak, this process, called hot surface ignition, can lead to fires in aircrafts, spacecrafts, vehicles, and machinery. In the aerospace industry, design practices and certification processes must ensure that this fire hazard is mitigated. In the present work, we performed experiments to assess whether sustainable aviation fuels have a different hot surface ignition behavior compared to petroleum-derived jet fuel. In a canonical configuration, 2.5mm fuel droplets were released onto a high temperature optically accessible surface. After a 150mm fall representative of a typical aircraft engine compartment, the droplets broke up upon impact and ignition occured if the surface temperature was sufficiently high. The temperature of ignition was quantified and we found that all investigated fuels had a similar or higher hot surface ignition temperature to jet-A in this configuration. The temperature of ignition spanned a 70K range for the 4 fuels investigated. High speed shadowgraphy revealed the effect of fuel surface tension on the droplet break-up process, and high speed chemiluminescence imaging revealed the multi-step ignition process that the droplet underwent.
                     </div>
                 </li>
+            </ul>
+
+            <h3 class="year-separator collapsible collapsed" onclick="toggleYear('year-2024')">2024</h3>
+            <ul class="year-publications collapsed" id="year-2024">
                 <li>
                     <span class="publication-title">Kinetic modeling of carbonaceous particle morphology, polydispersity and nanostructure through the discrete sectional approach</span>
                     <span class="publication-authors">Andrea Nobili, Niccolò Fanari, <b><u>Timoteo Dinelli</u></b>, Edoardo Cipriano, Alberto Cuoci, Matteo Pelucchi, Alessio Frassoldati, Tiziano Faravelli</span>
@@ -179,6 +189,10 @@
                         The kinetic mechanisms describing the combustion of longer-chain fuels often have limited applicability due to the high number of species involved in their oxidation and decomposition paths. This work proposes a combined methodology for developing compact but accurate kinetic mechanisms of these fuels and applies it to dimethoxymethane (DMM), or oxymethylene ether 1 (OME1). An automatic chemical lumping procedure, performed by grouping structural isomers into pseudospecies, was proposed and applied to a detailed kinetic model of DMM pyrolysis and oxidation, built from state-of-the-art kinetic sub-models. Such a methodology proved particularly efficient in delivering a compact kinetic mechanism, requiring only 11 species instead of 35 to describe DMM sub-chemistry. The obtained lumped kinetic model was then improved through a data-driven optimization procedure, targeting data artificially generated by the reference detailed mechanism. The optimization was performed on the physically-constrained parameters of the modified-Arrhenius rate constants of the controlling reaction steps, identified via local sensitivity analyses. The dissimilarities between the predictions of the detailed and lumped models were minimized using a Curve Matching objective function for a comprehensive and quantitative characterization. Above all, the optimized mechanism was found to behave comparably to the starting detailed one, throughout most of the operating space and target properties (ignition delay times in shock tubes, laminar flame speeds, and speciations in stirred and flow reactors). The successful application of the proposed methodology to the DMM chemistry paves the way for its extensive use in the kinetic modeling of longer OMEs as well as heavier fuels, for which the computational advantages are expected to be even higher.
                     </div>
                 </li>
+            </ul>
+
+            <h3 class="year-separator collapsible collapsed" onclick="toggleYear('year-2023')">2023</h3>
+            <ul class="year-publications collapsed" id="year-2023">
                 <li>
                     <span class="publication-title">Automated Kinetic Mechanism Evaluation for e-Fuels Using SciExpeM: The Case of Oxymethylene Ethers</span>
                     <span class="publication-authors"><b><u>Timoteo Dinelli</u></b>, Luna Pratali Maffei, Alessandro Pegurri, Amedeo Puri, Alessandro Stagni, Tiziano Faravelli</span>
@@ -235,6 +249,15 @@
         function toggleAbstract(id) {
             const abstract = document.getElementById(id);
             abstract.classList.toggle('show');
+        }
+
+        // Toggle year visibility
+        function toggleYear(yearId) {
+            const yearList = document.getElementById(yearId);
+            const yearHeader = event.target;
+
+            yearList.classList.toggle('collapsed');
+            yearHeader.classList.toggle('collapsed');
         }
     </script>
 </body>

@@ -293,6 +293,61 @@ section.card#publications ul li:hover {
     padding-left: 1em;            /* Slight indent on hover */
 }
 
+/* Year separator for publications */
+.year-separator {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #cbd5e1;
+    display: block;
+}
+
+.year-separator:first-of-type {
+    margin-top: 0.5em;  /* Less space for first year */
+}
+
+/* Collapsible year header */
+.year-separator.collapsible {
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+    position: relative;
+    padding-right: 30px;  /* Space for arrow */
+}
+
+.year-separator.collapsible:hover {
+    color: #2563eb;  /* Blue on hover */
+}
+
+.year-separator.collapsible::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.year-separator.collapsible.collapsed::after {
+    transform: rotate(-90deg);  /* Arrow points right when collapsed */
+}
+
+/* Collapsible publications list */
+.year-publications {
+    max-height: 10000px;  /* Large enough for content */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    opacity: 1;
+}
+
+.year-publications.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+}
+
 /* Enhanced publication formatting */
 .publication-title {
     font-size: 1.1em;
@@ -421,11 +476,17 @@ p {
     color: #1e293b;              /* Dark text for contrast */
 }
 
-/* Focus styles for accessibility */
-a:focus,
-button:focus {
+/* Focus styles for accessibility - only for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
     outline: 2px solid #2563eb;  /* Blue outline for keyboard navigation */
     outline-offset: 2px;         /* Space around the outline */
+}
+
+/* Remove focus outline for mouse clicks */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /* Improved code/pre styling if present */
