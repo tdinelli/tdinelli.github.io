@@ -282,6 +282,7 @@ section.card#education ul li:hover {
 /* Enhanced publication list styling - only for publications */
 section.card#publications ul li {
     padding: 0.8em;               /* Add padding around each publication */
+    padding-left: 1em;            /* Fixed left padding */
     border-left: 3px solid transparent; /* Invisible border for hover effect */
     transition: all 0.2s ease;    /* Smooth transition */
     border-radius: 4px;           /* Subtle rounded corners */
@@ -290,7 +291,6 @@ section.card#publications ul li {
 section.card#publications ul li:hover {
     background-color: #f5f5f5;    /* Very subtle gray background on hover */
     border-left-color: #2563eb;   /* Blue accent border on hover */
-    padding-left: 1em;            /* Slight indent on hover */
 }
 
 /* Year separator for publications */
@@ -383,14 +383,20 @@ section.card ul li a[href*="DOI"],
     display: inline-block;
     background-color: #2563eb;    /* Blue background */
     color: white;                 /* White text */
-    padding: 0.2em 0.6em;         /* Padding for badge look */
+    padding: 0.25em 0.6em;        /* Smaller padding for badge look */
     border-radius: 4px;           /* Rounded corners */
-    font-size: 0.85em;            /* Slightly smaller */
+    font-size: 0.8em;             /* Smaller font size */
     font-weight: 600;             /* Bold text */
     text-transform: uppercase;    /* Uppercase letters */
     transition: background-color 0.2s ease;
     border: none;
     cursor: pointer;
+    min-width: 70px;              /* Smaller minimum width for uniform size */
+    text-align: center;           /* Center text within the box */
+    box-sizing: border-box;       /* Include padding in width calculation */
+    font-family: inherit;         /* Use same font family */
+    line-height: 1.2;             /* Fixed line height */
+    vertical-align: middle;       /* Align vertically */
 }
 
 section.card ul li a[href*="doi.org"]:hover,
