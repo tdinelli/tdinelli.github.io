@@ -4,24 +4,28 @@ html {
 
 body {
     margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.7;
-    font-size: 1.125rem;
+    max-width: 960px;
+    line-height: 1.65;
+    font-size: 1.1rem;
     background-color: #fafafa;
     color: #2c3e50;
     padding: 0 10px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Consolas, monospace;
     hyphens: auto;
 }
 
 a {
-    color: #2563eb;
+    color: #3b5f8a;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 a:hover {
     color: #dc2626;
+}
+
+.translate-link {
+    color: #4285f4;
 }
 
 /* ── Nav ── */
@@ -36,11 +40,11 @@ nav a {
     display: inline-block;
 }
 
-nav a[href*='/']::before {
+nav a::before {
     content: "[ ";
 }
 
-nav a[href*='/']::after {
+nav a::after {
     content: "]";
 }
 
@@ -85,7 +89,7 @@ header {
 }
 
 .header-image img {
-    max-width: 170px;
+    max-width: 190px;
     height: auto;
     border-radius: 0;
 }
@@ -107,12 +111,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2em;
+    font-size: 1.05em;
     font-weight: 700;
     color: #475569;
-    margin-top: 1.6em;
-    margin-bottom: 0.6em;
-    padding-bottom: 0.3em;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    padding-bottom: 0.2em;
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -136,7 +140,57 @@ section {
 }
 
 #publications ul li {
-    margin-bottom: 1.4em;
+    margin-bottom: 0.9em;
+    font-size: 0.95em;
+    line-height: 1.45;
+}
+
+/* ── Home grid ── */
+.home-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5em;
+    align-items: start;
+}
+
+.home-news h2 {
+    margin-top: 0.35em;
+}
+
+.news-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1em 0;
+}
+
+.news-list li {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.85em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+}
+
+.news-list p {
+    margin: 0;
+    font-size: 0.8em;
+    line-height: 1.45;
+}
+
+@media (max-width: 700px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ── Contact ── */
@@ -153,8 +207,110 @@ section {
 .contact-list i {
     width: 1.3em;
     text-align: center;
-    color: #64748b;
+    color: #3b5f8a;
     margin-right: 0.4em;
+}
+
+/* ── Gallery ── */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8em;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gallery-placeholder {
+    height: 180px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.9em;
+}
+
+.gallery-item img {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.gallery-item img:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Lightbox ── */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2em;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1em;
+    right: 1.2em;
+    color: #f8fafc;
+    font-size: 2.2em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* ── Notes ── */
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+
+.notes-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1em;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.6em;
+}
+
+.notes-date {
+    color: #94a3b8;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.note-header {
+    margin-bottom: 1.5em;
+}
+
+.note-header h1 {
+    margin-bottom: 0.1em;
 }
 
 /* ── Footer ── */
@@ -164,6 +320,7 @@ footer {
     border-top: 1px solid #e2e8f0;
     font-size: 0.9em;
     color: #64748b;
+    text-align: center;
 }
 
 .copyright {
@@ -175,13 +332,13 @@ footer {
 
 /* ── Selection ── */
 ::selection {
-    background-color: #bfdbfe;
+    background-color: #d6e0eb;
     color: #1e293b;
 }
 
 /* ── Focus ── */
 a:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid #3b5f8a;
     outline-offset: 2px;
 }
 
