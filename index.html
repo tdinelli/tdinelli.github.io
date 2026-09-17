@@ -1,125 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timoteo Dinelli</title>
-    <meta name="description" content="Timoteo Dinelli's personal website">
-    <meta property="og:title" content="Timoteo Dinelli">
-    <meta property="og:description" content="Timoteo Dinelli's personal website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' dominant-baseline='central' text-anchor='middle' font-size='80'>🚀</text></svg>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <meta name="google-site-verification" content="z1FQ-u-51z8ABzjZ191cyHjhd6oYcSUz4xWdB1YWkIo" />
-</head>
-<body>
-    <nav>
-        <a href="/">Home</a><span class="long-pipe"></span>
-        <a href="publications.html">Publications</a><span class="long-pipe"></span>
-        <a href="notes.html">Notes</a><span class="long-pipe"></span>
-        <a href="assets/documents/cv.pdf">CV</a>
-    </nav>
-    <hr>
-    <div class="home-grid">
-        <div class="home-main">
-            <header>
-                <div class="header-image">
-                    <img src="assets/images/picture.jpg" alt="Profile Picture" width="190">
-                </div>
-                <div class="header-content">
-                    <h1>Timoteo Dinelli</h1>
-                    <h2>/tiˈmɔteo diˈnɛlli/</h2>
-                    <h2>
-                        "Sempre forte, con coraggio e senza paura".
-                        <a
-                            class="translate-link"
-                            href="https://translate.google.com/?sl=it&tl=en&text=Sempre%20forte%2C%20con%20coraggio%20e%20senza%20paura.&op=translate"
-                            target="_blank"
-                        >
-                            <i class="fa-solid fa-language"></i>
-                        </a>
-                    </h2>
-                </div>
-            </header>
-            <main>
-                <section>
-                    <p>
-                    I am a postdoctoral researcher in the
-                    <a href="https://ihmegroup.github.io/">FxLAB</a> at
-                    Stanford University, which I re-joined after completing my
-                    Ph.D. in Chemical Engineering at Politecnico di Milano's
-                    Department of Chemistry, Materials, and Chemical
-                    Engineering Giulio Natta, where I worked within the <a
-                    href="http://creckmodeling.polimi.it/">CRECK</a> modeling
-                    laboratory under the guidance of Alessandro Stagni. My journey
-                    at Politecnico began with my B.Sc. (2016–2019) and continued
-                    through my M.Sc. (2019–2021) and Ph.D. (2021–2026), all in
-                    Chemical Engineering, including a period as a visiting student
-                    researcher at FxLAB during my doctoral studies.
-                    </p>
-                    <p>
-                    My research focuses on the application of data-driven
-                    methods to develop chemical kinetic models for predicting
-                    the combustion and pyrolysis of complex fuels. In addition,
-                    my work includes the development of optimization routines
-                    and reduction strategies for the computational cost
-                    associated with chemical kinetic models. I enjoy writing
-                    code, mostly in C/C++, and more recently in Julia and
-                    Fortran. As you can see, my interests are terribly broad. I
-                    admit my exuberance, and I do nothing to limit it. I am
-                    fortunate to be able to explore diverse and interesting
-                    questions while holding down a paying job (see my
-                    <a href="assets/documents/cv.pdf">[ cv]</a> for more details).
-                    </p>
-                    <p>
-                    If you are interested in my work, contact me!
-                    <a class="obfuscated-email" data-user="tdinelli" data-domain="stanford.edu" href="#">[ email me]</a>
-                    </p>
-                </section>
-            </main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timoteo Dinelli</title>
+        <meta name="description" content="Timoteo Dinelli's personal website" />
+        <meta property="og:title" content="Timoteo Dinelli" />
+        <meta property="og:description" content="Timoteo Dinelli's personal website" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' dominant-baseline='central' text-anchor='middle' font-size='80'>🚀</text></svg>"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <meta
+            name="google-site-verification"
+            content="z1FQ-u-51z8ABzjZ191cyHjhd6oYcSUz4xWdB1YWkIo"
+        />
+    </head>
+    <body>
+        <nav>
+            <a href="/">Home</a><span class="long-pipe"></span>
+            <a href="publications.html">Publications</a><span class="long-pipe"></span>
+            <a href="notes.html">Notes</a><span class="long-pipe"></span>
+            <a href="assets/documents/cv.pdf">CV</a>
+        </nav>
+        <hr />
+        <div class="home-grid">
+            <div class="home-main">
+                <header>
+                    <div class="header-image">
+                        <img src="assets/images/picture.jpg" alt="Profile Picture" width="190" />
+                    </div>
+                    <div class="header-content">
+                        <h1>Timoteo Dinelli</h1>
+                        <h2>/tiˈmɔteo diˈnɛlli/</h2>
+                        <h2>
+                            "Sempre forte, con coraggio e senza paura".
+                            <a
+                                class="translate-link"
+                                href="https://translate.google.com/?sl=it&tl=en&text=Sempre%20forte%2C%20con%20coraggio%20e%20senza%20paura.&op=translate"
+                                target="_blank"
+                            >
+                                <i class="fa-solid fa-language"></i>
+                            </a>
+                        </h2>
+                    </div>
+                </header>
+                <main>
+                    <section>
+                        <p>
+                            I am a postdoctoral researcher in the
+                            <a href="https://ihmegroup.github.io/">FxLAB</a> at Stanford University,
+                            which I re-joined after completing my Ph.D. in Chemical Engineering at
+                            Politecnico di Milano's Department of Chemistry, Materials, and Chemical
+                            Engineering Giulio Natta, where I worked within the
+                            <a href="http://creckmodeling.polimi.it/">CRECK</a> modeling laboratory
+                            under the guidance of Alessandro Stagni. My journey at Politecnico began
+                            with my B.Sc. (2016–2019) and continued through my M.Sc. (2019–2021) and
+                            Ph.D. (2021–2026), all in Chemical Engineering, including a period as a
+                            visiting student researcher at FxLAB during my doctoral studies.
+                        </p>
+                        <p>
+                            My research focuses on the application of data-driven methods to develop
+                            chemical kinetic models for predicting the combustion and pyrolysis of
+                            complex fuels. In addition, my work includes the development of
+                            optimization routines and reduction strategies for the computational
+                            cost associated with chemical kinetic models. I enjoy writing code,
+                            mostly in C/C++, and more recently in Julia and Fortran. As you can see,
+                            my interests are terribly broad. I admit my exuberance, and I do nothing
+                            to limit it. I am fortunate to be able to explore diverse and
+                            interesting questions while holding down a paying job (see my
+                            <a href="assets/documents/cv.pdf">[ cv]</a> for more details).
+                        </p>
+                        <p>
+                            If you are interested in my work, contact me!
+                            <a
+                                class="obfuscated-email"
+                                data-user="tdinelli"
+                                data-domain="stanford.edu"
+                                href="#"
+                                >[ email me]</a
+                            >
+                        </p>
+                    </section>
+                </main>
+            </div>
+
+            <aside class="home-news">
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li>
+                        <span class="news-date">Sep. 2026</span>
+                        <p>
+                            Our
+                            <a href="https://doi.org/10.1016/j.proci.2026.106431"
+                                >last International Symposium on Combustion contribution</a
+                            >
+                            just got published.
+                        </p>
+                    </li>
+                </ul>
+            </aside>
         </div>
 
-        <aside class="home-news">
-            <h2>News</h2>
-            <ul class="news-list">
-                <li><span class="news-date">Sep. 2026</span><p>Our <a href="https://doi.org/10.1016/j.proci.2026.106431">last International Symposium on Combustion contribution</a> just got published.</p></li>
+        <section id="contact" class="full-width">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a
+                        class="obfuscated-email"
+                        data-user="tdinelli"
+                        data-domain="stanford.edu"
+                        href="#"
+                    ></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a
+                        class="obfuscated-email"
+                        data-user="timoteo.dinelli"
+                        data-domain="gmail.com"
+                        href="#"
+                    ></a>
+                </li>
+                <li>
+                    <i class="ai ai-google-scholar"></i>
+                    <a href="https://scholar.google.com/citations?user=H117wUwAAAAJ&hl=it&oi=ao"
+                        >Google Scholar</a
+                    >
+                </li>
+                <li>
+                    <i class="ai ai-orcid"></i>
+                    <a href="https://orcid.org/0000-0003-1660-2965">ORCID</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-researchgate"></i>
+                    <a href="https://www.researchgate.net/profile/Timoteo_Dinelli">ResearchGate</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/timoteo-dinelli/">LinkedIn</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="https://github.com/tdinelli">GitHub</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <a href="https://twitter.com/tinellidimoteo">X / Twitter</a>
+                </li>
             </ul>
-        </aside>
-    </div>
-
-    <section id="contact" class="full-width">
-        <h2>Contact</h2>
-        <ul class="contact-list">
-            <li><i class="fa-solid fa-envelope"></i> <a class="obfuscated-email" data-user="tdinelli" data-domain="stanford.edu" href="#"></a></li>
-            <li><i class="fa-solid fa-envelope"></i> <a class="obfuscated-email" data-user="timoteo.dinelli" data-domain="gmail.com" href="#"></a></li>
-            <li><i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=H117wUwAAAAJ&hl=it&oi=ao">Google Scholar</a></li>
-            <li><i class="ai ai-orcid"></i> <a href="https://orcid.org/0000-0003-1660-2965">ORCID</a></li>
-            <li><i class="fa-brands fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Timoteo_Dinelli">ResearchGate</a></li>
-            <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/timoteo-dinelli/">LinkedIn</a></li>
-            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/tdinelli">GitHub</a></li>
-            <li><i class="fa-brands fa-x-twitter"></i> <a href="https://twitter.com/tinellidimoteo">X / Twitter</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>This page was created by mixing different sources. Feel free to use it! Source code can be found on my <a href="https://github.com/tdinelli/tdinelli.github.io">GitHub</a>.</p>
-        <p class="copyright">Copyright © 2026, Timoteo Dinelli.</p>
-    </footer>
-    <script>
-        document.querySelectorAll('.obfuscated-email').forEach(function (el) {
-            var user = el.dataset.user;
-            var domain = el.dataset.domain;
-            if (!el.textContent.trim()) {
-                el.textContent = user + ' [at] ' + domain.replace('.', ' [dot] ');
-            }
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                window.location.href = 'mailto:' + user + '@' + domain;
+        </section>
+        <footer>
+            <p>
+                This page was created by mixing different sources. Feel free to use it! Source code
+                can be found on my
+                <a href="https://github.com/tdinelli/tdinelli.github.io">GitHub</a>.
+            </p>
+            <p class="copyright">Copyright © 2026, Timoteo Dinelli.</p>
+        </footer>
+        <script>
+            document.querySelectorAll(".obfuscated-email").forEach(function (el) {
+                var user = el.dataset.user;
+                var domain = el.dataset.domain;
+                if (!el.textContent.trim()) {
+                    el.textContent = user + " [at] " + domain.replace(".", " [dot] ");
+                }
+                el.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    window.location.href = "mailto:" + user + "@" + domain;
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
