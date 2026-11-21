@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 20px auto;
-    max-width: 960px;
+    max-width: 1140px;
     line-height: 1.65;
     font-size: 1.1rem;
     background-color: #fafafa;
@@ -148,7 +148,7 @@ section {
 /* ── Home grid ── */
 .home-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2.5em;
     align-items: start;
 }
@@ -178,13 +178,19 @@ section {
     color: #94a3b8;
     font-size: 0.85em;
     font-weight: 700;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .news-list p {
     margin: 0;
     font-size: 0.8em;
     line-height: 1.45;
+}
+
+.news-list p + p {
+    margin-top: 0.9em;
 }
 
 @media (max-width: 700px) {
@@ -194,6 +200,14 @@ section {
 }
 
 /* ── Contact ── */
+#contact h2 {
+    margin-top: 0.4em;
+}
+
+#contact {
+    margin-bottom: 1em;
+}
+
 .contact-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -213,8 +227,8 @@ section {
 
 /* ── Footer ── */
 footer {
-    margin-top: 3em;
-    padding-top: 1.5em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
     border-top: 1px solid #e2e8f0;
     font-size: 0.9em;
     color: #64748b;
